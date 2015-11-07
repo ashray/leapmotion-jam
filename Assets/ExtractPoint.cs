@@ -41,9 +41,9 @@ public class ExtractPoint : MonoBehaviour {
         // Default translation = (-0.065, 0, 0.5)
         //Vector3 bias = new Vector3(-0.5, 0, 1);
         // Scale is (0.001, 0.001, 0.001)
-        Vector3 default_translation = new Vector3(65, 0, 500);
+        Vector3 default_translation = new Vector3(65, -80, 50);
         //femur_model.transform.position = (1000*vector3+default_translation)/1000;
-        femur_model.transform.position = vector3;
+        femur_model.transform.position = vector3 + default_translation/2000;
         //femur_model = FindObjectOfType<GameObject>.
     }
 }
