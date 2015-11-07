@@ -38,5 +38,11 @@ public class RiggedFinger : FingerModel {
         }
       }
     }
+
+    if (this.fingerType == Finger.FingerType.TYPE_INDEX)
+    {
+        ExtractPoint.LogPoint(this.finger_.TipPosition.ToUnityScaled(this.mirror_z_axis_));
+        ExtractPoint.TrackBoneFinger(this.GetTipPosition());
+    }
   }
 }

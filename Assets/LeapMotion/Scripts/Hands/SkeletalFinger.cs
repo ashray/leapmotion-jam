@@ -50,8 +50,9 @@ public class SkeletalFinger : FingerModel
         if (this.fingerType == Finger.FingerType.TYPE_INDEX)
         {
             Vector3 local_point = this.finger_.TipPosition.ToUnity(this.mirror_z_axis_);
-            local_point = this.controller_.transform.TransformPoint(local_point) + (this.offset_ * 1000);
+            //local_point = this.controller_.transform.TransformPoint(local_point) + (this.offset_ * 1000);
             ExtractPoint.LogPoint(local_point);
+            ExtractPoint.TrackBoneFinger(this.finger_.TipPosition.ToUnityScaled(this.mirror_z_axis_));
         }
     }
 }
